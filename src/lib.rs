@@ -1,9 +1,13 @@
+pub mod project;
+
 use bevy::prelude::*;
 
 pub struct EditorPlugin;
 
 impl Plugin for EditorPlugin {
-    fn build(&self, _app: &mut App) {}
+    fn build(&self, app: &mut App) {
+        app.add_plugins(project::ProjectPlugin);
+    }
 }
 
 #[cfg(test)]

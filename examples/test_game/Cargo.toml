@@ -1,0 +1,21 @@
+[package]
+name = "test_game"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "test_game"
+crate-type = ["cdylib"]
+
+[[bin]]
+name = "test_game"
+path = "src/main.rs"
+
+
+[dependencies]
+bevy = "0.14.2"
+editor_game_plugin = {path = "../../crates/editor_game_plugin", optional = true}
+
+
+[features]
+editor = ["dep:editor_game_plugin"]
