@@ -6,6 +6,7 @@ pub struct EditorGamePlugin;
 impl Plugin for EditorGamePlugin {
     fn build(&self, app: &mut App) {
         // For some future systems
+        app.add_plugins(HeadlessPlugin);
     }
 }
 
